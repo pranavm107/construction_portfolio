@@ -78,7 +78,7 @@ export default function ContactForm() {
             required
             value={formData.name}
             onChange={handleChange}
-            placeholder="e.g. John Doe"
+            placeholder="e.g. Arjun Kumar"
             className="w-full bg-warm-white/50 border border-neutral-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent focus:bg-white transition-all duration-200"
           />
         </div>
@@ -95,7 +95,7 @@ export default function ContactForm() {
             required
             value={formData.email}
             onChange={handleChange}
-            placeholder="e.g. john@example.com"
+            placeholder="e.g. arjun@example.com"
             className="w-full bg-warm-white/50 border border-neutral-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent focus:bg-white transition-all duration-200"
           />
         </div>
@@ -111,7 +111,7 @@ export default function ContactForm() {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            placeholder="e.g. +1 (555) 0199"
+            placeholder="e.g. +91 63826 75859"
             className="w-full bg-warm-white/50 border border-neutral-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent focus:bg-white transition-all duration-200"
           />
         </div>

@@ -2,43 +2,49 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { Search, Compass, ClipboardCheck, HardHat, ShieldCheck, Key } from 'lucide-react';
+import { Compass, ClipboardCheck, HardHat, Hammer, Building2, Paintbrush, Key } from 'lucide-react';
 
 const steps = [
   {
     num: "01",
-    title: "Consultation",
-    desc: "Understanding project scopes, design desires, budget constraints, and aesthetic alignments.",
-    icon: Search,
+    title: "Planning",
+    desc: "Technical BIM modeling, architectural layout drafts, structural design calculations, and local corporation approvals.",
+    icon: ClipboardCheck,
   },
   {
     num: "02",
-    title: "Site Survey",
-    desc: "Comprehensive soil tests, topographic mapping, structural assessments, and zoning checks.",
+    title: "Site Development",
+    desc: "Earth excavation, soil bearing capacity checks, site grading, and structural layout marking.",
     icon: Compass,
   },
   {
     num: "03",
-    title: "Planning & Approval",
-    desc: "BIM models, structural drafts, local approvals, zoning permits, and cost estimation.",
-    icon: ClipboardCheck,
-  },
-  {
-    num: "04",
-    title: "Construction",
-    desc: "Execution of the structure from foundation laying to framing, masonry, and utilities installation.",
+    title: "Foundation Works",
+    desc: "RCC footing pouring, foundation grade beam reinforcement, and anti-termite subgrade treatments.",
     icon: HardHat,
   },
   {
+    num: "04",
+    title: "Structural Construction",
+    desc: "Core RCC pillar casting, roof slab reinforcement, brick masonry, and structural framing.",
+    icon: Hammer,
+  },
+  {
     num: "05",
-    title: "Quality Assurance",
-    desc: "Rigorous inspections, moisture testing, strength checks, and local compliance audits.",
-    icon: ShieldCheck,
+    title: "Facade Installation",
+    desc: "Fitting high-performance double-glazed glass skins, cladding elements, and external security doors.",
+    icon: Building2,
   },
   {
     num: "06",
+    title: "Interior Completion",
+    desc: "Advanced mechanical, electrical, plumbing (MEP) layouts, ceiling work, tiling, and primary paint coats.",
+    icon: Paintbrush,
+  },
+  {
+    num: "07",
     title: "Project Handover",
-    desc: "Deep clean, client walk-through, document handoff, warranty validation, and keys delivery.",
+    desc: "Professional third-party QA validation, structural RERA/corporation documentation handoff, and keys delivery.",
     icon: Key,
   }
 ];
@@ -67,7 +73,7 @@ export default function ConstructionTimeline() {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 relative z-10">
           {steps.map((step, idx) => {
             const Icon = step.icon;
             return (

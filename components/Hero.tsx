@@ -93,7 +93,7 @@ export default function Hero() {
 
       {/* Floating coordinates for architectural feel */}
       <div className="absolute bottom-6 left-6 md:left-12 z-20 hidden sm:block font-mono text-[9px] text-neutral-400 select-none">
-        <span>{"LAT: 37° 47' 29.74\" N | LON: 122° 25' 9.94\" W | ELEV: 15.2M"}</span>
+        <span>{"LAT: 11° 1' 0.48\" N | LON: 76° 57' 20.88\" E | ELEV: 411.2M"}</span>
       </div>
       
       <div className="absolute bottom-6 right-6 md:right-12 z-20 hidden sm:block font-mono text-[9px] text-neutral-400 select-none">

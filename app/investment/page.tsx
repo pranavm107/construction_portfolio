@@ -2,14 +2,14 @@
 
 import RevealText from '@/components/animations/RevealText';
 import FadeIn from '@/components/animations/FadeIn';
-import { ArrowUpRight, ShieldCheck, DollarSign, LineChart, FileText } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck, IndianRupee, LineChart, FileText } from 'lucide-react';
 import Link from 'next/link';
 
 const insights = [
   {
-    icon: DollarSign,
+    icon: IndianRupee,
     label: "AUM Asset Value",
-    value: "$420 Million",
+    value: "₹3,500 Crores",
     desc: "Capital value of projects currently under management and execution."
   },
   {
@@ -108,7 +108,7 @@ export default function InvestmentPage() {
         {/* Legal Disclaimer */}
         <FadeIn delay={0.4} className="font-sans text-[10px] text-neutral-400 leading-relaxed border-t border-neutral-200/60 pt-8">
           <p>
-            <strong>REGULATORY DISCLAIMER:</strong> Co-investment opportunities listed on this portal are structured specifically for Accredited Investors under Regulation D Rule 506(c) of the US Securities Act. Yields and internal rates of return (IRR) are based on historical completions and act as projections only. Real estate development involves project site hazards, zoning alterations, and capitalization risks.
+            <strong>REGULATORY DISCLAIMER:</strong> Co-investment opportunities listed on this portal are structured specifically in compliance with the Securities and Exchange Board of India (SEBI) guidelines and the Real Estate (Regulation and Development) Act (RERA). Yields and internal rates of return (IRR) are based on historical completions and act as projections only. Real estate development involves project site hazards, zoning alterations, and capitalization risks.
           </p>
         </FadeIn>
 

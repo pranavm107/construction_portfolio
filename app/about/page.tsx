@@ -28,9 +28,9 @@ const values = [
 ];
 
 const team = [
-  { name: "Julian Vance", role: "Principal Architect", init: "JV" },
-  { name: "Dr. Sarah Chen", role: "Lead Structural Engineer", init: "SC" },
-  { name: "Robert Miller", role: "Chief of Construction Ops", init: "RM" }
+  { name: "Pranav Agneesh", role: "Principal Architect & Founder", init: "PA" },
+  { name: "Dr. Sarah Srinivasan", role: "Lead Structural Engineer", init: "SS" },
+  { name: "R. Rajesh Kumar", role: "Chief of Construction Ops", init: "RK" }
 ];
 
 export default function AboutPage() {

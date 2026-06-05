@@ -26,7 +26,7 @@ A full-screen sticky viewport playing a preloaded sequence of 240 JPG constructi
 
 ### 2. High-End Real Estate Showcase
 Interactive filterable grid displaying architectural visualization cards for residential, commercial, industrial, and infrastructure divisions.
-* **Photorealistic Renders**: Visual cards for *The Obsidian Pavilion*, *The Helix Tower*, *Nexus Logistics Hub*, and *Vanguard Viaduct* rendered in high-fidelity twilight golden hour photography style.
+* **Photorealistic Renders**: Visual cards for *The Ananta Residence*, *Meridian Business Centre*, *Southern Industrial Park*, and *Coimbatore Smart Corridor* rendered in high-fidelity twilight golden hour photography style.
 * **Spec HUD Tables**: High-contrast tables showing project location, structural size (sq ft), construction span (months), and client details.
 
 ### 3. Interactive Technical Assets

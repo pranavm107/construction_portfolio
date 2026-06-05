@@ -13,19 +13,57 @@ if (!fs.existsSync(TARGET_DIR)) {
 const filesToProcess = [
   {
     prefix: 'obsidian_pavilion',
-    target: 'obsidian.webp'
+    target: 'ananta.webp'
   },
   {
     prefix: 'helix_tower',
-    target: 'helix.webp'
+    target: 'meridian.webp'
   },
   {
     prefix: 'nexus_logistics',
-    target: 'nexus.webp'
+    target: 'southern-industrial.webp'
   },
   {
     prefix: 'vanguard_viaduct',
-    target: 'vanguard.webp'
+    target: 'coimbatore-smart.webp'
+  },
+  // Blueprints
+  {
+    prefix: 'obsidian_blueprint',
+    target: 'ananta-blueprint.webp'
+  },
+  {
+    prefix: 'helix_blueprint',
+    target: 'meridian-blueprint.webp'
+  },
+  {
+    prefix: 'nexus_blueprint',
+    target: 'southern-industrial-blueprint.webp'
+  },
+  {
+    prefix: 'vanguard_blueprint',
+    target: 'coimbatore-smart-blueprint.webp'
+  },
+  // Progress Images
+  {
+    prefix: 'obsidian_progress',
+    target: 'ananta-progress-1.webp',
+    extraTargets: ['ananta-progress-2.webp', 'ananta-progress-3.webp']
+  },
+  {
+    prefix: 'helix_progress',
+    target: 'meridian-progress-1.webp',
+    extraTargets: ['meridian-progress-2.webp', 'meridian-progress-3.webp']
+  },
+  {
+    prefix: 'nexus_progress',
+    target: 'southern-industrial-progress-1.webp',
+    extraTargets: ['southern-industrial-progress-2.webp', 'southern-industrial-progress-3.webp']
+  },
+  {
+    prefix: 'vanguard_progress',
+    target: 'coimbatore-smart-progress-1.webp',
+    extraTargets: ['coimbatore-smart-progress-2.webp', 'coimbatore-smart-progress-3.webp']
   }
 ];
 
@@ -53,6 +91,14 @@ async function main() {
         .toFile(destPath);
         
       console.log(`Saved: ${destPath}`);
+
+      if (item.extraTargets) {
+        for (const extra of item.extraTargets) {
+          const extraDestPath = path.join(TARGET_DIR, extra);
+          console.log(`Copying: ${item.target} -> ${extra}`);
+          fs.copyFileSync(destPath, extraDestPath);
+        }
+      }
     } else {
       console.error(`Error: Could not find generated image for ${item.prefix}`);
     }

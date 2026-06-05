@@ -73,28 +73,28 @@ export default function StatsSection() {
       value: 150,
       suffix: "+",
       label: "Execution",
-      description: "Premium architectural developments delivered across multiple states."
+      description: "Landmark residential, commercial, and infrastructure projects delivered."
     },
     {
       icon: Award,
       value: 10,
-      suffix: "L+",
-      label: "Volume",
-      description: "Square feet of concrete, steel, and structural glass built to date."
+      suffix: "+ Years",
+      label: "Excellence",
+      description: "Dedicated construction excellence in premium engineering and design."
     },
     {
       icon: BarChart3,
-      value: 20,
+      value: 75,
       suffix: "+",
-      label: "Heritage",
-      description: "Years of engineering experience overseeing tier-one builds."
+      label: "Partnerships",
+      description: "Corporate clients and institutional co-investors who trust our build quality."
     },
     {
       icon: Users,
-      value: 98,
-      suffix: "%",
-      label: "Fulfillment",
-      description: "Client satisfaction based on post-handover structural audits."
+      value: 25,
+      suffix: "+",
+      label: "Heritage",
+      description: "Premium architectural developments reshaping South Indian horizons."
     }
   ];
 

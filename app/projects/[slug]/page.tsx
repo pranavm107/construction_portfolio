@@ -2,6 +2,7 @@ import { projectsData } from '@/lib/projectData';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, MapPin, DollarSign, Clock, LayoutGrid, Hammer, CheckSquare } from 'lucide-react';
+import Image from 'next/image';
 
 export async function generateStaticParams() {
   return projectsData.map((project) => ({
@@ -89,13 +90,25 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                   Before concrete is poured, our structural engineers model every column, rebar spacing, and spatial layout in high-fidelity BIM environments.
                 </p>
               </div>
-              <div className="md:col-span-2 aspect-[16/9] w-full bg-neutral-900 rounded-2xl blueprint-grid relative border border-accent/20 flex flex-col items-center justify-center p-6 text-accent">
-                <span className="font-mono text-[10px] tracking-widest uppercase mb-1">
-                  Blueprint Schematic Overlays
-                </span>
-                <span className="font-sans text-xs text-neutral-500 text-center max-w-xs leading-relaxed">
-                  [Vector wireframe structural alignment checks verified and locked]
-                </span>
+              <div className="md:col-span-2 aspect-[16/9] w-full relative overflow-hidden rounded-2xl border border-accent/20 bg-neutral-900">
+                {project.blueprintImage ? (
+                  <Image
+                    src={project.blueprintImage}
+                    alt={`${project.title} Blueprint`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover opacity-60"
+                  />
+                ) : (
+                  <div className="absolute inset-0 blueprint-grid flex flex-col items-center justify-center p-6 text-accent">
+                    <span className="font-mono text-[10px] tracking-widest uppercase mb-1">
+                      Blueprint Schematic Overlays
+                    </span>
+                    <span className="font-sans text-xs text-neutral-500 text-center max-w-xs leading-relaxed">
+                      [Vector wireframe structural alignment checks verified and locked]
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
           </section>
@@ -103,14 +116,26 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
           {/* Phase 2: Progress */}
           <section className="border-b border-neutral-200/60 pb-16">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-              <div className="md:col-span-2 aspect-[16/9] w-full bg-neutral-200 rounded-2xl relative overflow-hidden border border-neutral-300 flex flex-col items-center justify-center p-6">
-                <Hammer className="w-8 h-8 text-neutral-400 mb-2 animate-bounce" />
-                <span className="font-display text-xs font-bold text-neutral-500 uppercase tracking-widest">
-                  Site Preparation & Foundation Work
-                </span>
-                <span className="font-sans text-[10px] text-neutral-400 mt-1">
-                  Excavation and subgrade reinforced steel beams in place.
-                </span>
+              <div className="md:col-span-2 aspect-[16/9] w-full relative overflow-hidden rounded-2xl border border-neutral-300 bg-neutral-200">
+                {project.progressImages && project.progressImages[0] ? (
+                  <Image
+                    src={project.progressImages[0]}
+                    alt={`${project.title} Construction`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                    <Hammer className="w-8 h-8 text-neutral-400 mb-2 animate-bounce" />
+                    <span className="font-display text-xs font-bold text-neutral-500 uppercase tracking-widest">
+                      Site Preparation & Foundation Work
+                    </span>
+                    <span className="font-sans text-[10px] text-neutral-400 mt-1">
+                      Excavation and subgrade reinforced steel beams in place.
+                    </span>
+                  </div>
+                )}
               </div>
               <div className="md:col-span-1">
                 <span className="font-mono text-[10px] text-accent font-bold uppercase tracking-wider block mb-1">
@@ -140,13 +165,25 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                   Final building certification, thermal checks, interior handover, and client occupancy walk-through successfully complete.
                 </p>
               </div>
-              <div className="md:col-span-2 aspect-[16/9] w-full bg-neutral-800 rounded-2xl relative overflow-hidden border border-neutral-700 flex flex-col items-center justify-center p-6 text-warm-white">
-                <span className="font-display text-sm font-black text-accent uppercase tracking-widest">
-                  Project Fully Handed Over
-                </span>
-                <span className="font-sans text-[10px] text-neutral-400 mt-1">
-                  100% QA Inspection passed. Occupancy Certificate signed.
-                </span>
+              <div className="md:col-span-2 aspect-[16/9] w-full relative overflow-hidden rounded-2xl border border-neutral-700 bg-neutral-800">
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} Handover`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center text-warm-white">
+                    <span className="font-display text-sm font-black text-accent uppercase tracking-widest">
+                      Project Fully Handed Over
+                    </span>
+                    <span className="font-sans text-[10px] text-neutral-400 mt-1">
+                      100% QA Inspection passed. Occupancy Certificate signed.
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
           </section>
