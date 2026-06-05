@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@import "./typography.css";
+@import "./animations.css";
+
+:root {
+  --background: #FAFAF8;
+  --foreground: #111111;
+  --primary: #111111;
+  --secondary: #6B7280;
+  --accent: #C89B03;
+  --card: #FFFFFF;
+  --warm-white: #FAFAF8;
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-warm-white: var(--warm-white);
+  --color-card: var(--card);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-manrope);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--warm-white);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
